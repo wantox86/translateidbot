@@ -1,0 +1,108 @@
+[2017-08-14 11:03:42.987] [INFO] debug - 
+Incomming Telegram message <<< 
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : /t goat
+[2017-08-14 11:03:46.647] [INFO] debug - 
+Outgoing Telegram message >>>
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : Detek Bahasa : en
+=> kambing
+[2017-08-14 11:03:56.288] [INFO] debug - 
+Incomming Telegram message <<< 
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : /start
+[2017-08-14 11:03:56.293] [INFO] debug - 
+Outgoing Telegram message >>>
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : Hai Wawan
+
+Selamat datang di Bot Translate Indonesia 
+silakan ketik kalimat yang akan di translate dengan command seperti dibawah ini
+  <code>/t </code>   : translate detek otomatis ke bahasa Indonesia
+              contoh => <code>/t goat</code> 
+  <code>/ti </code> : translate dari bahasa Inggris ke bahasa Indonesia
+              contoh => <code>/ti goat</code> 
+  <code>/te </code> : translate dari bahasa Indonesia ke bahasa Inggris
+              contoh => <code>/te kambing</code> 
+
+untuk bantuan daftar command silakan ketik <code>/help </code>
+
+ada pertanyan ? lapor bugs ? dan lainnya silakan email ke <code>translateid.telegram.bot@gmail.com</code>
+
+Enjoy your life.. @TranslateID_Bot
+[2017-08-14 14:01:06.327] [INFO] debug - 
+Incomming Telegram message <<< 
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : /start
+[2017-08-14 14:01:06.337] [INFO] debug - 
+Outgoing Telegram message >>>
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : Hai Wawan
+
+Selamat datang di Bot Translate Indonesia 
+silakan ketik kalimat yang akan di translate dengan command seperti dibawah ini
+  <code>/t </code>   : translate detek otomatis ke bahasa Indonesia
+              contoh => <code>/t goat</code> 
+  <code>/ti </code> : translate dari bahasa Inggris ke bahasa Indonesia
+              contoh => <code>/ti goat</code> 
+  <code>/te </code> : translate dari bahasa Indonesia ke bahasa Inggris
+              contoh => <code>/te kambing</code> 
+
+untuk bantuan daftar command silakan ketik <code>/help </code>
+
+ada pertanyan ? lapor bugs ? dan lainnya silakan email ke <code>translateid.telegram.bot@gmail.com</code>
+
+Enjoy your life.. @TranslateID_Bot
+[2017-08-14 14:16:55.576] [INFO] debug - 
+Incomming Telegram message <<< 
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : /start
+[2017-08-14 14:16:55.588] [INFO] debug - 
+Outgoing Telegram message >>>
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : Hai Wawan
+
+Selamat datang di Bot Translate Indonesia 
+silakan ketik kalimat yang akan di translate dengan command seperti dibawah ini
+  <code>/t </code>   : translate detek otomatis ke bahasa Indonesia
+              contoh => <code>/t goat</code> 
+  <code>/ti </code> : translate dari bahasa Inggris ke bahasa Indonesia
+              contoh => <code>/ti goat</code> 
+  <code>/te </code> : translate dari bahasa Indonesia ke bahasa Inggris
+              contoh => <code>/te kambing</code> 
+
+untuk bantuan daftar command silakan ketik <code>/help </code>
+
+ada pertanyan ? lapor bugs ? dan lainnya silakan email ke <code>translateid.telegram.bot@gmail.com</code>
+
+Enjoy your life.. @TranslateID_Bot
+[2017-08-14 14:17:23.690] [INFO] debug - 
+Incomming Telegram message <<< 
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : /feedback kurang ganteng nih
+[2017-08-14 14:18:18.613] [INFO] debug - 
+Outgoing Telegram message >>>
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : Feedback anda telah kami terima. terima kasih atas feedback yang anda berikan.
+[2017-08-14 14:29:01.546] [INFO] debug - 
+Incomming Telegram message <<< 
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : /about
+[2017-08-14 14:29:01.549] [INFO] debug - 
+Outgoing Telegram message >>>
+ -name    : Wawan Setiawan
+ -user id : wsetiawann
+ -msg     : Created by Wawan S
+translateid.telegram.bot@gmail.com
+2017
