@@ -39,8 +39,6 @@ app.post('/', function (req, res)
                     var reply_to_message = {parse_mode: "HTML"};
                     bot.sendMessage(jsonResult[i].chat_id, reply, reply_to_message);
                 }
-                replyJSOn.trx = ownStatus.status_0_successful;
-                res.end(JSON.stringify(replyJSOn));
             };
         });
     });

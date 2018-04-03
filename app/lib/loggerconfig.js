@@ -28,10 +28,10 @@ var logger = require('../lib/logger');
 log4js.configure({ 
   appenders: {
     out: { type: 'console' }, 
-    default: { type: 'dateFile', filename: 'logs/default', "pattern":"-dd.log",alwaysIncludePattern:true}, 
-    error: { type: 'dateFile', filename: 'logs/error', "pattern":"-dd.log",alwaysIncludePattern:true}, 
-    info: { type: 'dateFile', filename: 'logs/info', "pattern":"-dd.log",alwaysIncludePattern:true},
-    debug: { type: 'dateFile', filename: 'logs/debug', "pattern":"-dd.log",alwaysIncludePattern:true} 
+    default: { type: 'dateFile', filename: 'logs/default', "pattern":"-yyyy-MM-dd.log",alwaysIncludePattern:true}, 
+    error: { type: 'dateFile', filename: 'logs/error', "pattern":"-yyyy-MM-dd.log",alwaysIncludePattern:true}, 
+    info: { type: 'dateFile', filename: 'logs/info', "pattern":"-yyyy-MM-dd.log",alwaysIncludePattern:true},
+    debug: { type: 'dateFile', filename: 'logs/debug', "pattern":"-yyyy-MM-dd.log",alwaysIncludePattern:true} 
   },
   categories: {
     default: { appenders: ['out','default'], level: 'info' },

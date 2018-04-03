@@ -9,17 +9,20 @@ module.exports =
     this.printLogDebug("\nIncomming Telegram message <<< " 
                     + "\n -name    : " + msg.from.first_name + " " + msg.from.last_name
                     + "\n -user id : " + msg.from.username
-                    + "\n -msg     : " + msg.text
-                    + "\n");
+                    + "\n -msg     : " + msg.text);
                     // callback(0,1);
+    	if(typeof msg.text === 'undefined' )
+	{
+	  loggerDebug = logger.getLoggerDebug();
+    	  loggerDebug.info('Reply : \n' + JSON.stringify(msg));
+	}
   },
   printLogTeleOutgoing: function(msg, reply)
   {
     this.printLogDebug("\nOutgoing Telegram message >>>" 
                     + "\n -name    : " + msg.from.first_name + " " + msg.from.last_name
                     + "\n -user id : " + msg.from.username
-                    + "\n -msg     : " + reply
-                    + "\n");
+                    + "\n -msg     : " + reply);
   },
   printLogError: function(str)
   {
@@ -36,8 +39,8 @@ module.exports =
     loggerDebug = logger.getLoggerDebug();
     var param = req.body;
     var counter = 1;
-    loggerDebug.info(req.protocol + '://' + req.get('host') + req.originalUrl.split('?')[0]);
-    for (var key in param) 
+    loggerDebug.info(req.protocol + ':');//' + req.get('host') + req.originalUrl.split('?')[0]);
+    for (var key in param)
     {
       
       if (param.hasOwnProperty(key)) 

@@ -22,6 +22,7 @@ app.post('/', function (req, res)
         userid : req.body.user_id,
         userpass : req.body.user_pass,
     }
+    // console.log("WHERE : " + JSON.stringify(jsonWhere));
     loginModel.find_all(jsonWhere, function(status,jsonData)
     {
         if(jsonData.length > 0)
@@ -34,14 +35,19 @@ app.post('/', function (req, res)
                     expiresIn: config.token_duration
                 });
                 replyJSOn.trx = ownStatus.status_0_successful;
-
+                // replyJSOn.Data = jsonData;
                 replyJSOn.Token = token;
+                // console.log("Reply : " );
+                // console.log(JSON.stringify(replyJSOn));
                 helper.printLogReplyConsole(replyJSOn);
                 res.end(JSON.stringify(replyJSOn));
             }
             else
             {
                 replyJSOn.trx = ownStatus.status_8_wrong_user_pass
+                // replyJSOn.Data = jsonData;
+                // console.log("Reply : " );
+                // console.log(JSON.stringify(replyJSOn));
                 helper.printLogReplyConsole(replyJSOn);
                 res.end(JSON.stringify(replyJSOn));
             }
@@ -49,6 +55,7 @@ app.post('/', function (req, res)
         else
         {
             replyJSOn.Response = ownStatus.status_11_cannot_find_data
+            // replyJSOn.Data = jsonData;
             console.log("Reply : " );
             console.log(JSON.stringify(replyJSOn));
             res.end(JSON.stringify(replyJSOn));
