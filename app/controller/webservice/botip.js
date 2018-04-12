@@ -18,7 +18,6 @@ const bot = new TelegramBot(token, {polling: true});
 
 botLib.setBot(bot);
 
-// Matches "/echo [whatever]"
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     const chatMsg = msg.text;
@@ -231,10 +230,6 @@ bot.on('message', (msg) => {
     }
     else if(splitedMsg == "/t")
     {
-      // var googleTranslate = require('google-translate')("AIzaSyBLLzWvuUnN7yvjZpZb0wFBylQ76Jl6kUM");
-      // googleTranslate.translate('My name is Brandon', 'id', function(err, translation) {
-      //   console.log(translation);
-      // });
       var sbRet = new StringBuilder();
       translate(chatMsg.substring(3), {to: 'id'}).then(res => 
       {
@@ -249,10 +244,6 @@ bot.on('message', (msg) => {
     }
     else if(splitedMsg == "/ti")
     {
-      // var googleTranslate = require('google-translate')("AIzaSyBLLzWvuUnN7yvjZpZb0wFBylQ76Jl6kUM");
-      // googleTranslate.translate('My name is Brandon', 'id', function(err, translation) {
-      //   console.log(translation);
-      // });
       var sbRet = new StringBuilder();
       translate(chatMsg.substring(4), {from: 'en', to: 'id'}).then(res => 
       {
@@ -267,10 +258,6 @@ bot.on('message', (msg) => {
     }
     else if(splitedMsg == "/te")
     {
-      // var googleTranslate = require('google-translate')("AIzaSyBLLzWvuUnN7yvjZpZb0wFBylQ76Jl6kUM");
-      // googleTranslate.translate('My name is Brandon', 'id', function(err, translation) {
-      //   console.log(translation);
-      // });
       var sbRet = new StringBuilder();
       translate(chatMsg.substring(4), {from: 'id', to: 'en'}).then(res => 
       {
@@ -445,74 +432,6 @@ bot.on('message', (msg) => {
           console.error(err);
       });
     }
-    // else if(splitedMsg == "/print")
-    // {
-    //   var data = {
-    //     "1":{"1":"k","2":"a","3":"m","4":"b","5":"i","6":"n","7":"g","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "2":{"1":"","2":"","3":"","4":"a","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "3":{"1":"","2":"","3":"","4":"d","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "4":{"1":"","2":"","3":"t","4":"a","5":"p","6":"i","7":"r","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "5":{"1":"","2":"","3":"","4":"k","5":"","6":"b","7":"u","8":"a","9":"y","10":"a","11":"","12":"","13":"","14":"","15":""},
-    //     "6":{"1":"","2":"","3":"","4":"","5":"k","6":"","7":"s","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "7":{"1":"","2":"","3":"","4":"","5":"a","6":"y","7":"a","8":"m","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "8":{"1":"","2":"","3":"k","4":"","5":"d","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "9":{"1":"","2":"","3":"u","4":"","5":"a","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "10":{"1":"k","2":"u","3":"d","4":"a","5":"l","6":"a","7":"u","8":"t","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "11":{"1":"o","2":"","3":"a","4":"","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "12":{"1":"d","2":"","3":"","4":"","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "13":{"1":"o","2":"","3":"","4":"","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "14":{"1":"k","2":"","3":"","4":"","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""},
-    //     "15":{"1":"k","2":"","3":"","4":"","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":"","13":"","14":"","15":""}
-    //     };
-    //   sb.append("`");
-    //   sb.append("----------------------------\n");
-    //   for(var i=1;i < 16;i++)
-    //   {
-    //     for(var j=1;j<15;j++)
-    //     {
-    //       if(j==1)
-    //       {
-    //         var str = data["" + i]["" + j];
-    //         if(str=="")
-    //         {
-    //           str = "*";
-    //         }
-    //         sb.append("|").append(str).append("|");
-    //       }
-    //       else
-    //       {
-    //         var str = data["" + i]["" + j];
-    //         if(str=="")
-    //         {
-    //           str = "*";
-    //         }
-    //         sb.append("" + str).append("|");
-    //       }
-    //     }
-    //     sb.append("---------------------------\n");
-    //   }
-    //   sb.append("`");
-    //   var reply_to_message = {parse_mode: "Markdown"};
-    //   bot.sendMessage(chatId, sb.toString(), reply_to_message);
-    // }
-    
 });
-
-// bot.onText(/\/cmd/, function onLoveText(msg) {
-//   const opts = {
-//     reply_to_message_id: msg.message_id,
-//     reply_markup: JSON.stringify({
-//       keyboard: [
-//         ['/t'],
-//         ['/ti'],
-//         ['/te'],
-//         ['/help'],
-//         ['/list']
-//       ]
-//     })
-//   };
-//   bot.sendMessage(msg.chat.id, 'Silakan pilih command ?', opts);
-//   helper.printLogTeleOutgoing(str);
-// });
 
 
