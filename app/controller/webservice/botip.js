@@ -8,13 +8,12 @@ var botLib = require('../../lib/botlib');
 var myBot = require('../../model/bot');
 var botModel = new myBot();
 
-
-
-// replace the value below with the Telegram token you receive from @BotFather
 const token = config.token_bot;
 
-// Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
+
+const activity_register = "register";
+const activity_translate = "translate";
 
 botLib.setBot(bot);
 
@@ -165,6 +164,20 @@ bot.on('message', (msg) => {
     + " yo	--> Yoruba \n"
     + " zu	--> Zulu \n";
 
+    if(splitedMsg == "/ti" || splitedMsg == "/te" || splitedMsg == "/tc" ) 
+    {
+      var jsonParamInsertActivity =
+      {
+        chat_id: msg.chat.id,
+        first_name: msg.from.first_name,
+        activity_id: activity_translate,
+        activity_timestamp: new Date()
+      };
+      botModel.insert_activity(jsonParamInsertActivity, function(status, jsonData)
+      {
+        // IGNORE 
+      });
+    }
     if(splitedMsg == "/help")
     {
       reply = "Hai " + msg.from.first_name + "\n\n"
@@ -216,6 +229,17 @@ bot.on('message', (msg) => {
             {
               helper.printLogError('failed insert chat id ' + msg.chat.id + ' to database');
             }
+          });
+          var jsonParamInsertActivity =
+          {
+            chat_id: msg.chat.id,
+            first_name: msg.from.first_name,
+            activity_id: activity_register,
+            activity_timestamp: new Date()
+          };
+          botModel.insert_activity(jsonParamInsertActivity, function(status, jsonData)
+          {
+            // IGNORE 
           });
         }
       });
@@ -430,6 +454,18 @@ bot.on('message', (msg) => {
         helper.printLogTeleOutgoing(msg, sbRet.toString());
       }).catch(err => {
           console.error(err);
+      });
+
+      var jsonParamInsertActivity =
+      {
+        chat_id: msg.chat.id,
+        first_name: msg.from.first_name,
+        activity_id: activity_translate,
+        activity_timestamp: new Date()
+      };
+      botModel.insert_activity(jsonParamInsertActivity, function(status, jsonData)
+      {
+        // IGNORE 
       });
     }
 });
