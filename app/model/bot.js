@@ -55,6 +55,18 @@ function bot()
         self.currentdb.DBinsert(tableName,param,function(status, result){
             callback(status, result);
         });
+    },
+    this.insert_activity = function(param, callback)
+    {
+        var tableName = "activity";
+        if(config.app_dev_mode)
+        {
+            console.log('Devel Mode Detected');
+            tableName = "activity_dev";
+        }  
+        self.currentdb.DBinsert(tableName,param,function(status, result){
+            callback(status, result);
+        }); 
     };
 }
 module.exports = bot;
